@@ -42,7 +42,7 @@ class NetworkManager{
                 return
             }
             completion(.success(data))
-        }
+        }.resume()
     }
     
     func getPhotos(page: Int,

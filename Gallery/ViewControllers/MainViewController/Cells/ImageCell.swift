@@ -14,21 +14,26 @@ class ImageCell: UICollectionViewCell {
     @IBOutlet weak var gradientView: UIView!
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var likes: UILabel!
+    let gradientLayer = CAGradientLayer()
     
     func setData(photo: PhotoModel){
-        let url = URL(string: photo.urls?.full ?? "")
+        let url = URL(string: photo.urls?.small ?? "")
         photoImageView.kf.setImage(with: url)
         username.text = photo.user?.username
         likes.text = "\(photo.likes ?? 0)"
+        
+        self.clipsToBounds = true
+        self.layer.cornerRadius = 10
+        self.layoutIfNeeded()
+                makeGradient()
     }
     
     func makeGradient(){
-       var gradientLayer = CAGradientLayer()
+        gradientLayer.removeFromSuperlayer()
+        gradientLayer.frame = gradientView.bounds
         
-           gradientLayer.frame = gradientView.bounds
+        gradientLayer.colors = [UIColor(red: 0, green: 0, blue: 0, alpha: 0).cgColor, UIColor(red: 0, green: 0, blue: 0, alpha: 0.8).cgColor]
         
-           gradientLayer.colors = [UIColor(red: 0, green: 0, blue: 0, alpha: 1), UIColor(red: 0, green: 0, blue: 0, alpha: 0)]
-        
-           gradientView.layer.addSublayer(gradientLayer)
+        gradientView.layer.addSublayer(gradientLayer)
     }
 }

@@ -21,6 +21,7 @@ struct PhotoModel: Codable{
 struct PhotoURLsModel: Codable{
     var raw: String?
     var full: String?
+    var small: String?
 }
 
 struct UserModel: Codable{
