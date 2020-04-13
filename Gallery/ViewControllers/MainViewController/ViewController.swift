@@ -59,4 +59,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         cell.setData(photo: photos[indexPath.row])
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+    }
 }
