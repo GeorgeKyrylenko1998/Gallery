@@ -17,6 +17,7 @@
 		5E4FE24C2439EBF8004BD47D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E4FE24A2439EBF8004BD47D /* Main.storyboard */; };
 		5E4FE24E2439EBFB004BD47D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E4FE24D2439EBFB004BD47D /* Assets.xcassets */; };
 		5E4FE2512439EBFB004BD47D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E4FE24F2439EBFB004BD47D /* LaunchScreen.storyboard */; };
+		5E5A7A6F244C99AD00D9BE8A /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5A7A6E244C99AD00D9BE8A /* PhotoViewController.swift */; };
 		5E5C5980244458CC00C3DBBF /* CollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5C597F244458CC00C3DBBF /* CollectionViewLayout.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		5E4FE24D2439EBFB004BD47D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E4FE2502439EBFB004BD47D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E4FE2522439EBFB004BD47D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E5A7A6E244C99AD00D9BE8A /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		5E5C597F244458CC00C3DBBF /* CollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewLayout.swift; sourceTree = "<group>"; };
 		64F15C0D3781F530206511C4 /* Pods-Gallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gallery.release.xcconfig"; path = "Target Support Files/Pods-Gallery/Pods-Gallery.release.xcconfig"; sourceTree = "<group>"; };
 		C0AA77E7B862DFFD4A0633F3 /* Pods-Gallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gallery.debug.xcconfig"; path = "Target Support Files/Pods-Gallery/Pods-Gallery.debug.xcconfig"; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 		5E17391B2443C77E002AF054 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				5E5A7A6D244C98C800D9BE8A /* PhotoViewControllerView */,
 				5E17391C2443C789002AF054 /* MainViewController */,
 			);
 			path = ViewControllers;
@@ -124,6 +127,14 @@
 				5E4FE2522439EBFB004BD47D /* Info.plist */,
 			);
 			path = Gallery;
+			sourceTree = "<group>";
+		};
+		5E5A7A6D244C98C800D9BE8A /* PhotoViewControllerView */ = {
+			isa = PBXGroup;
+			children = (
+				5E5A7A6E244C99AD00D9BE8A /* PhotoViewController.swift */,
+			);
+			path = PhotoViewControllerView;
 			sourceTree = "<group>";
 		};
 		918602969A8BF51E9EB198C0 /* Pods */ = {
@@ -263,6 +274,7 @@
 				5E4FE2452439EBF8004BD47D /* AppDelegate.swift in Sources */,
 				5E5C5980244458CC00C3DBBF /* CollectionViewLayout.swift in Sources */,
 				5E17391924439622002AF054 /* PhotoModel.swift in Sources */,
+				5E5A7A6F244C99AD00D9BE8A /* PhotoViewController.swift in Sources */,
 				5E4FE2472439EBF8004BD47D /* SceneDelegate.swift in Sources */,
 				5E17391E2443C7B0002AF054 /* ImageCell.swift in Sources */,
 			);
@@ -340,7 +352,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -394,7 +406,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -410,6 +422,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 242HT6L8AJ;
 				INFOPLIST_FILE = Gallery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -428,6 +441,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 242HT6L8AJ;
 				INFOPLIST_FILE = Gallery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

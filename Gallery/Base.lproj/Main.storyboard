@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R5s-IU-2wE">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,16 +13,16 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Gallery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qjh-EN-fc0">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="724"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewLayout key="collectionViewLayout" id="MVS-bQ-a0w" customClass="PhotosCollectionViewLayout" customModule="Gallery" customModuleProvider="target"/>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCell" id="mTD-wE-hs2" customClass="ImageCell" customModule="Gallery" customModuleProvider="target">
-                                        <rect key="frame" x="31" y="0.0" width="352" height="198"/>
+                                        <rect key="frame" x="11.666666666666666" y="0.0" width="352" height="198"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="62s-nh-j5e">
                                             <rect key="frame" x="0.0" y="0.0" width="352" height="198"/>
@@ -49,7 +49,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKz-jC-HEn">
-                                                    <rect key="frame" x="276" y="139.5" width="28" height="21"/>
+                                                    <rect key="frame" x="276" y="139.66666666666666" width="28" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -105,26 +105,72 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Photo View Controller-->
         <scene sceneID="8gC-Sg-FQC">
             <objects>
-                <viewController id="QSH-NQ-54C" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PhotoViewController" id="QSH-NQ-54C" customClass="PhotoViewController" customModule="Gallery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jvH-bT-JZy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cQa-NA-6Fz">
-                                <rect key="frame" x="87" y="384" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Dn-2a-jlF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="690"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Z3o-ee-i0B">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="690"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Z3o-ee-i0B" firstAttribute="height" secondItem="7Dn-2a-jlF" secondAttribute="height" id="Do8-pE-Jbz"/>
+                                    <constraint firstAttribute="trailing" secondItem="Z3o-ee-i0B" secondAttribute="trailing" id="GHk-iB-ICZ"/>
+                                    <constraint firstItem="Z3o-ee-i0B" firstAttribute="top" secondItem="7Dn-2a-jlF" secondAttribute="top" id="Ie5-Ef-Pho"/>
+                                    <constraint firstItem="Z3o-ee-i0B" firstAttribute="width" secondItem="7Dn-2a-jlF" secondAttribute="width" id="SBC-0k-3QW"/>
+                                    <constraint firstItem="Z3o-ee-i0B" firstAttribute="leading" secondItem="7Dn-2a-jlF" secondAttribute="leading" id="nee-Be-Pde"/>
+                                    <constraint firstAttribute="bottom" secondItem="Z3o-ee-i0B" secondAttribute="bottom" id="qac-94-mSI"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="QSH-NQ-54C" id="qha-LM-aNV"/>
+                                </connections>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u04-Rs-yoQ">
+                                <rect key="frame" x="25" y="649" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Oe6-au-pXn"/>
+                                    <constraint firstAttribute="width" constant="50" id="zFS-hg-XMz"/>
+                                </constraints>
+                                <state key="normal" image="Instagramm"/>
+                                <connections>
+                                    <action selector="openInstagrammAction:" destination="QSH-NQ-54C" eventType="touchUpInside" id="zxU-YI-K9g"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="woO-aU-1Ku" firstAttribute="trailing" secondItem="7Dn-2a-jlF" secondAttribute="trailing" id="L5F-eV-6zD"/>
+                            <constraint firstItem="woO-aU-1Ku" firstAttribute="bottom" secondItem="7Dn-2a-jlF" secondAttribute="bottom" id="LbN-Pc-cuV"/>
+                            <constraint firstItem="7Dn-2a-jlF" firstAttribute="top" secondItem="woO-aU-1Ku" secondAttribute="top" id="bHC-99-bK2"/>
+                            <constraint firstItem="u04-Rs-yoQ" firstAttribute="leading" secondItem="jvH-bT-JZy" secondAttribute="leading" constant="25" id="haf-BC-liB"/>
+                            <constraint firstAttribute="bottom" secondItem="u04-Rs-yoQ" secondAttribute="bottom" constant="25" id="usV-cZ-OMS"/>
+                            <constraint firstItem="7Dn-2a-jlF" firstAttribute="leading" secondItem="woO-aU-1Ku" secondAttribute="leading" id="vBx-tz-Fr3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="woO-aU-1Ku"/>
                     </view>
+                    <navigationItem key="navigationItem" id="0bN-UA-8lF">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="xDz-S0-H8C">
+                            <connections>
+                                <action selector="shareAction:" destination="QSH-NQ-54C" id="T5Q-5C-wUa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO"/>
+                    <connections>
+                        <outlet property="imgPhoto" destination="Z3o-ee-i0B" id="kDc-FF-cjd"/>
+                        <outlet property="scrollView" destination="7Dn-2a-jlF" id="mTB-3C-Ez6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r3R-fr-v7J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2110" y="138"/>
+            <point key="canvasLocation" x="2106.4000000000001" y="137.4384236453202"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BUP-tj-edI">
@@ -132,7 +178,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="R5s-IU-2wE" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Bmb-BE-tqu">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -146,6 +192,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="iconfinder_Heart_728945" width="64" height="64"/>
+        <image name="Instagramm" width="199.66667175292969" height="200"/>
+        <image name="iconfinder_Heart_728945" width="85.333335876464844" height="85.333335876464844"/>
     </resources>
 </document>

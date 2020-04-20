@@ -61,6 +61,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "PhotoViewController") as? PhotoViewController else {return}
+        vc.photoModel = photos[indexPath.row]
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
